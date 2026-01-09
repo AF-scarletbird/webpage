@@ -2,11 +2,93 @@
 <html>
 <head>
 <title>Alex's Landing Page</title>
+<style>
+    td.lightblue-center {background-color:lightskyblue; text-align:center;}
+    td.center {text-align:center;}
+    img.outset-bordered {border-style: outset; border-color: yellow; border-width: 5px;}
+    img.screenshot {border-style: outset; border-color: red; border-width: 5px;}
+</style>
 </head>
-<body>
+<body style="background-color:antiquewhite">
 
 <h1>Alex's Landing Page</h1>
-<p>Jan 2, 2026 - Webpage created</p>
+<table style="background-color:darkgray; width:100%;">
+    <tr>
+        <td style="width:20%; text-align:center; background-color:skyblue;">
+            <h2>Solitaire Implementations</h2><br>
+            Various card games that I've<br>
+            built digital implementations for
+        </td>
+        <td class="lightblue-center">
+            <a href="https://github.com/AF-scarletbird/black-hole-console"><img class="outset-bordered" src="black-hole.jpg" alt="Black Hole">
+                <img class="screenshot" src="blackHoleScreenshot.png" alt="Program Screenshot"><br><h4>Black Hole</h4></a><br>
+            Suck in all other cards in this variant of Golf
+        </td>
+        <td class="lightblue-center">
+            <a href="https://github.com/AF-scarletbird/golf-solitiare-console"><img class="outset-bordered" src="golf.jpg" alt="Golf">
+                <img class="screenshot" src="golfScreenshot.png" alt="Program Screenshot"><br><h4>Golf</h4></a><br>
+            Clear the foundation by putting together sequences of cards
+        </td>
+    </tr>
+</table>
+<table style="background-color:darkgray; width:100%;">
+    <tr>
+        <td style="background-color:burlywood; width:20%" class="center"><h2>Puzzles</h2><br>
+            Of both word and logic types
+        </td>
+        <td style="background-color:beige; width:25%" class="center"><img src="crossword.png" alt="placeholder"><br>
+            <h4>Crosswords</h4><br>
+            <ul>
+                <li>Coming Soon</li>
+            </ul>
+
+        </td>
+        <td style="background-color:beige; width:25%" class="center"><img src="simpleloop002.png" alt="002: Simple Loop"><img src="mines001.png" alt="001: Minesweeper"><br>
+            <h4>Logic Puzzles</h4><br>
+            <p>[<a href="Alex's Puzzle Collection.pdf">PDF w/ all puzzles</a>] [<a href="Alex's Puzzle Solutions.pdf">Solutions PDF</a>]</p>
+            <ul>
+                <li>002: Simple Loop [<a href="https://puzz.link/p?simpleloop/10/10/0020id0082c67o0g0048">PuzzLink</a>] 
+                    <button id="select2" onclick="onClick(this)" type="button">See Preview</button></li>
+                <li>001: Minesweeper [<a href="https://puzz.link/p?mines/9/9/g3h2g1p2.g3g6g4q2g6g4g6g2q6g6g5g33o3h2g2g./">PuzzLink</a>] 
+                    <button id="select1" onclick="onClick(this)" type="button">See Preview</button></li>
+            </ul>
+        </td>
+        <td style="background-color: beige;" class="center">
+            <h6 id="puzzleTitle" style="font-size:large">001: Minesweeper</h6>
+            <img  id = "puzzleImage" src="mines001preview.png">
+            <p id = "puzzleDescription">Locate some mines in the grid. To help you do so, some cells have been clued with numbers; these numbers indicate the amount of mines present in the immediate surroundings (the eight cells horizontally, vertically, or diagonally adjacent to the numbered cell).
+                <br>
+Some cells are clued with a question mark (?). Like other clue cells, these cells do not contain. However, it is up to you to determine both where and how many mines are placed around these clues.
+</p>
+        </td>
+    </tr>
+</table>
+
+    <h2>About Alex</h2>
+
+    <p>I'm currently an undergrad student at the University of Illinois (Urbana-Champaign) pursuing an Electrical Engineering major.<br>
+        Although my interests include racquet sports (tennis, badminton, pickleball), my interests most promimently featured on this webpage are card and puzzle games.
+        I've been a long-time solver of word puzzles (crosswords, etc.) and logic puzzles, but only recently have I begun to start constructing these puzzles.
+        In addition, I've also created some solitiaire implementations both as a product of my interest in card games and to practice programming.
+        Hopefully as time passes, I build more stuff to put on this webpage!<br>
+        You can reach me at email address <a href="mailto:alexffei029@gmail.com">alexffei029@gmail.com</a>
+    </p>
+
+<script>
+    function onClick(buttonElement) {
+        var buttonId = buttonElement.id;
+        if (buttonId === "select1") {
+            document.getElementById("puzzleTitle").innerHTML = "001: Minesweeper";
+            document.getElementById("puzzleImage").src = "mines001preview.png";
+            document.getElementById("puzzleDescription").innerHTML = "Locate some mines in the grid. To help you do so, some cells have been clued with numbers; these numbers indicate the amount of mines present in the immediate surroundings (the eight cells horizontally, vertically, or diagonally adjacent to the numbered cell).<br>Some cells are clued with a question mark (?). Like other clue cells, these cells do not contain. However, it is up to you to determine both where and how many mines are placed around these clues."
+        }
+        else if (buttonId === "select2") {
+            document.getElementById("puzzleTitle").innerHTML = "002: Simple Loop";
+            document.getElementById("puzzleImage").src = "simpleloop002preview.png";
+            document.getElementById("puzzleDescription").innerHTML = "Draw a singular loop that passes through the centers of all unshaded cells on the grid. The loop may not have any intersections, branches, or dead ends."
+        }
+    }
+</script>
 
 </body>
 </html>
