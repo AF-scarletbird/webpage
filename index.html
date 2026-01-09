@@ -20,13 +20,13 @@
             built digital implementations for
         </td>
         <td class="lightblue-center">
-            <a href="https://github.com/AF-scarletbird/black-hole-console"><img class="outset-bordered" src="black-hole.jpg" alt="Black Hole">
-                <img class="screenshot" src="blackHoleScreenshot.png" alt="Program Screenshot"><br><h4>Black Hole</h4></a><br>
+            <a href="https://github.com/AF-scarletbird/black-hole-console"><img class="outset-bordered" src="images/solitaire/black-hole.jpg" alt="Black Hole">
+                <img class="screenshot" src="images/solitaire/blackHoleScreenshot.png" alt="Program Screenshot"><br><h4>Black Hole</h4></a><br>
             Suck in all other cards in this variant of Golf
         </td>
         <td class="lightblue-center">
-            <a href="https://github.com/AF-scarletbird/golf-solitiare-console"><img class="outset-bordered" src="golf.jpg" alt="Golf">
-                <img class="screenshot" src="golfScreenshot.png" alt="Program Screenshot"><br><h4>Golf</h4></a><br>
+            <a href="https://github.com/AF-scarletbird/golf-solitiare-console"><img class="outset-bordered" src="images/solitaire/golf.jpg" alt="Golf">
+                <img class="screenshot" src="images/solitaire/golfScreenshot.png" alt="Program Screenshot"><br><h4>Golf</h4></a><br>
             Clear the foundation by putting together sequences of cards
         </td>
     </tr>
@@ -36,16 +36,16 @@
         <td style="background-color:burlywood; width:20%" class="center"><h2>Puzzles</h2><br>
             Of both word and logic types
         </td>
-        <td style="background-color:beige; width:25%" class="center"><img src="crossword.png" alt="placeholder"><br>
+        <td style="background-color:beige; width:25%" class="center"><img src="images/puzzles/crossword.png" alt="placeholder"><br>
             <h4>Crosswords</h4><br>
             <ul>
                 <li>Coming Soon</li>
             </ul>
 
         </td>
-        <td style="background-color:beige; width:25%" class="center"><img src="simpleloop002.png" alt="002: Simple Loop"><img src="mines001.png" alt="001: Minesweeper"><br>
+        <td style="background-color:beige; width:25%" class="center"><img src="images/puzzles/simpleloop002.png" alt="002: Simple Loop"><img src="images/puzzles/mines001.png" alt="001: Minesweeper"><br>
             <h4>Logic Puzzles</h4><br>
-            <p>[<a href="Alex's Puzzle Collection.pdf">PDF w/ all puzzles</a>] [<a href="Alex's Puzzle Solutions.pdf">Solutions PDF</a>]</p>
+            <p>[<a href="PDFs/Alex's Puzzle Collection.pdf">PDF w/ all puzzles</a>] [<a href="PDFs/Alex's Puzzle Solutions.pdf">Solutions PDF</a>]</p>
             <ul>
                 <li>002: Simple Loop [<a href="https://puzz.link/p?simpleloop/10/10/0020id0082c67o0g0048">PuzzLink</a>] 
                     <button id="select2" onclick="onClick(this)" type="button">See Preview</button></li>
@@ -55,7 +55,7 @@
         </td>
         <td style="background-color: beige;" class="center">
             <h6 id="puzzleTitle" style="font-size:large">001: Minesweeper</h6>
-            <img  id = "puzzleImage" src="mines001preview.png">
+            <img  id = "puzzleImage" src="images/preview/mines001preview.png">
             <p id = "puzzleDescription">Locate some mines in the grid. To help you do so, some cells have been clued with numbers; these numbers indicate the amount of mines present in the immediate surroundings (the eight cells horizontally, vertically, or diagonally adjacent to the numbered cell).
                 <br>
 Some cells are clued with a question mark (?). Like other clue cells, these cells do not contain. However, it is up to you to determine both where and how many mines are placed around these clues.
@@ -79,12 +79,12 @@ Some cells are clued with a question mark (?). Like other clue cells, these cell
         var buttonId = buttonElement.id;
         if (buttonId === "select1") {
             document.getElementById("puzzleTitle").innerHTML = "001: Minesweeper";
-            document.getElementById("puzzleImage").src = "mines001preview.png";
+            document.getElementById("puzzleImage").src = "images/preview/mines001preview.png";
             document.getElementById("puzzleDescription").innerHTML = "Locate some mines in the grid. To help you do so, some cells have been clued with numbers; these numbers indicate the amount of mines present in the immediate surroundings (the eight cells horizontally, vertically, or diagonally adjacent to the numbered cell).<br>Some cells are clued with a question mark (?). Like other clue cells, these cells do not contain. However, it is up to you to determine both where and how many mines are placed around these clues."
         }
         else if (buttonId === "select2") {
             document.getElementById("puzzleTitle").innerHTML = "002: Simple Loop";
-            document.getElementById("puzzleImage").src = "simpleloop002preview.png";
+            document.getElementById("puzzleImage").src = "images/preview/simpleloop002preview.png";
             document.getElementById("puzzleDescription").innerHTML = "Draw a singular loop that passes through the centers of all unshaded cells on the grid. The loop may not have any intersections, branches, or dead ends."
         }
     }
