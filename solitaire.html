@@ -2,20 +2,148 @@
 <html>
 <head>
 <title>Alex's Solitaire Implementations</title>
+<style>
+    .solitaire-entry {
+        display: grid;
+        grid-template-columns: 15% 25% 60%;
+    }
+    .centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    .outset-bordered {
+        border-style: outset;
+        border-color: yellow;
+        border-width: 5px;
+    }
+    .screenshot {
+        border-style: outset;
+        border-color: red; 
+        border-width: 5px;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
+</style>
 </head>
-<body>
+<body style="background-color: skyblue;">
 
-<h1>Alex's Solitaire Implementations</h1>
-<p>Back to <a href="index.html">home page</a></p>
-<ol>
-    <li><a href="solitaire.html#black-hole">Black Hole</a></li>
-    <li><a href="solitaire.html#golf">Golf</a></li>
-</ol>
-<h3 id="black-hole">Black Hole</h3>
-<p>Last Updated: September 6th, 2025</p>
+<h1>Alex's Page [<a href="index.html">Home</a>] [&#x25CF; Solitaire &#x25CF;] [<a href="puzzles.html">Puzzles</a>] [<a href="technical.html">Technical</a>] [Miscellaneous]</h1>
+<h2>Solitaire Implementations</h2>
+<div style="background-color: lightgreen;">
+    <h2>Contents</h2>
+    <ol>
+        <li><a href="solitaire.html#black-hole">Black Hole</a></li>
+        <li><a href="solitaire.html#golf">Golf</a></li>
+    </ol>
+</div>
 
-<h3 id="golf">Golf</h3>
-<p>Last Updated: August 18th, 2025</p>
 
+<div style="background-color: antiquewhite;">
+<!-- Black Hole Solitaire -->
+<div class="solitaire-entry">
+
+<div class="centered">
+    <a href="https://github.com/AF-scarletbird/black-hole-console">
+        <h2 id="black-hole">Black Hole</h2>
+        <img class="outset-bordered" src="images/solitaire/black-hole.jpg">
+    </a>
+    
+    <p>Last Updated: September 6th, 2025</p>
+</div>
+
+<div>
+
+    <img class="screenshot" src="images/solitaire/blackHoleScreenshot.png">
+
+</div>
+
+<div>
+    <p>Black Hole is a variant of Golf. <a href="https://www.parlettgames.uk/patience/blackhole.html">Invented by David Parlett,</a> 
+        the objective of the game is to consolidate the whole deck into one pile, starting from the one card starting the wastepile. </p>
+
+    <button onclick="showBlackHole()">Alex's Commentary</button>
+        <div id="blackHoleComments" style="background-color: whitesmoke;">
+            <p>As Block Hole is a game derivative of Golf, my Black Hole implementation naturally borrows heavily from my Golf implementation. There are some
+                features I want to implement:
+                <ul>
+                    <li>Fix the Ace of Spades as the initial wastepile card</li>
+                    <li>In-browser play</li>
+                </ul>
+            </p>
+        </div>
+</div>
+
+</div>
+
+
+<script>
+    function showBlackHole() {
+        var element = document.getElementById("blackHoleComments");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+<!-- Golf Solitaire -->
+<div class="solitaire-entry">
+
+    <div class="centered">
+        <a href="https://github.com/AF-scarletbird/golf-solitiare-console">
+            <h2 id="golf">Golf</h2>
+            <img class="outset-bordered" src="images/solitaire/golf.jpg">
+        </a>
+
+        <p>Last Updated: August 18th, 2025</p>
+    </div>
+
+    <div class="centered">
+        <img class="screenshot" src="images/solitaire/golfScreenshot.png"><br>
+
+    </div>
+
+    <div>
+        <p>Golf is a builder game with the objective to clear a 7-by-5 "tableau" of cards and consolidate them into the wastepile.
+            Available cards (the tableau's bottom-most cards) can only be added to the wastepile if they are one rank above or below the top wastepile card.
+            The name comes from the ability to score "holes" by the number of cards left over. The score, accumulated over 9 holes, is then compared to
+            a par of 36.
+        </p>
+        <button onclick="showGolf()">Alex's Commentary</button>
+        <div id="golfComments" style="background-color: whitesmoke">
+            <p>The first solitaire game that I implemented, I chose to use C++ as a language. There are some features that I want to add, including:</p>
+            <ul>
+                <li>Scorekeeping</li>
+                <li>Ruleset Optiions</li>
+                <li>In-Browser Play</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script>
+    function showGolf() {
+        var element = document.getElementById("golfComments");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+</div>
 </body>
 </html>
