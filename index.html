@@ -7,15 +7,113 @@
     td.center {text-align:center;}
     img.outset-bordered {border-style: outset; border-color: yellow; border-width: 5px;}
     img.screenshot {border-style: outset; border-color: red; border-width: 5px;}
+    .centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+    }
+    .category {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .banner {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        border-top: 0px;
+        border-bottom: 0px;
+    }
 </style>
 </head>
 <body style="background-color:antiquewhite">
 
-<h1>Alex's Page [&#x25CF; Home &#x25CF;] [<a href="solitaire.html">Solitaire</a>] [<a href="puzzles.html">Puzzles</a>] [<a href="technical.html">Technical</a>] [<a>Miscellaneous</a>]</h1>
+<h1>Alex's Page [&#x25CF; Home &#x25CF;] [<a href="solitaire.html">Solitaire</a>] [<a href="puzzles.html">Puzzles</a>] [<a href="technical.html">Hardware Projects</a>] [<a>Miscellaneous</a>]</h1>
 <P>Welcome - thanks for stopping by!</P>
+<!-- Titles -->
+<div class="banner" style="margin-bottom: 0%;  background-color: lightgrey">
+    <div>
+        <h2 style="text-align: center; background-color: skyblue; margin-top: 0%; margin-bottom: 0%"><a href="solitaire.html">Solitaire Implementations</a></h2>
+    </div>
+    <div>
+        <h2 style="text-align: center; background-color: burlywood; margin-top: 0%; margin-bottom: 0%"><a href="puzzles.html">Puzzles</a></h2>
+    </div>
+    <div>
+        <h2 style="text-align: center; background-color: salmon; margin-top: 0%; margin-bottom: 0%"><a href="technical.html">Hardware Projects (TBA) </a></h2>
+    </div>
+</div>
+
+<!-- Contents -->
+<div class="banner" style="margin-top: 0%;">
+
+    <div class="category" style="background-color: lightblue">
+        
+    
+        <div class="centered" style="background-color: lightblue;">
+           <a href="solitaire.html#black-hole"><img class="outset-bordered" src="images/solitaire/black-hole.jpg" alt="Black Hole">
+                <br><h4>Black Hole</h4></a> 
+        </div>
+
+        <div class="centered" style="background-color: lightblue">
+            <a href="solitaire.html#golf"><img class="outset-bordered" src="images/solitaire/golf.jpg" alt="Golf">
+                <br><h4>Golf</h4></a><br>
+        </div>
+    </div>
+
+    <div class="category" style="background-color: lightyellow">
+        
+
+            <div class="centered" style="background-color: lightyellow">
+                <a href="puzzles.html#crosswords">
+                    <img src="images/puzzles/crossword.png" alt="placeholder"><br>
+                    <h4>Crosswords</h4>
+                </a>
+
+            </div>
+
+            <div class="centered" style="background-color: lightyellow">
+                <a href="puzzles.html#puzzles">
+                    <img src="images/puzzles/simpleloop002.png" alt="002: Simple Loop"><br>
+                    <h4>Logic Puzzles</h4>
+                </a>
+            </div>
+    </div>
+
+    <div style="background-color: lightsalmon">
+        <h3 style="text-align: center">Touch Switch Adaptation to Lamp</h3>
+        <div class="category">
+            <div class="centered" style="background-color: lightsalmon">
+                <img src="images/technical/light.jpg">
+            </div>
+
+            <div class="centered" style="background-color:lightsalmon">
+                <img src="images/technical/touchSwitch.jpg">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <h2>About Alex</h2>
+
+    <p>I'm currently an undergrad student at the University of Illinois (Urbana-Champaign) pursuing an Electrical Engineering major.<br>
+        I've been a long-time solver of word puzzles (crosswords, etc.) and logic puzzles, but only recently have I begun to start constructing these puzzles.
+        In addition, I've also created some solitiaire implementations both as a product of my interest in card games and to practice programming. 
+        Hopefully as time passes, I build more stuff to put on this webpage!<br>
+        Although not included on this website, I find myself playing an array of racquet sports, like tennis, badminton, pickleball.
+        You can reach me at email address <a href="mailto:alexffei029@gmail.com">alexffei029@gmail.com</a>
+    </p>
+
+</body>
+</html>
+
+<!--
 <table style="background-color:darkgray; width:100%;">
     <tr>
-        <td style="width:20%; text-align:center; background-color:skyblue;">
+        <td style="width:20%; text-align:center;">
             <h2><a href="solitaire.html">Solitaire Implementations</a></h2><br>
             Various card games that I've<br>
             built digital implementations for
@@ -65,15 +163,7 @@ Some cells are clued with a question mark (?). Like other clue cells, these cell
     </tr>
 </table>
 
-    <h2>About Alex</h2>
 
-    <p>I'm currently an undergrad student at the University of Illinois (Urbana-Champaign) pursuing an Electrical Engineering major.<br>
-        I've been a long-time solver of word puzzles (crosswords, etc.) and logic puzzles, but only recently have I begun to start constructing these puzzles.
-        In addition, I've also created some solitiaire implementations both as a product of my interest in card games and to practice programming. 
-        Hopefully as time passes, I build more stuff to put on this webpage!<br>
-        Although not included on this website, I find myself playing an array of racquet sports, like tennis, badminton, pickleball.
-        You can reach me at email address <a href="mailto:alexffei029@gmail.com">alexffei029@gmail.com</a>
-    </p>
 
 <script>
     function onClick(buttonElement) {
@@ -90,6 +180,4 @@ Some cells are clued with a question mark (?). Like other clue cells, these cell
         }
     }
 </script>
-
-</body>
-</html>
+ -->
