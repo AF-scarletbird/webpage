@@ -23,8 +23,13 @@
 <p><i>All of my puzzles - crosswords, logic puzzles, etc.</i></p>
 
 <div id="puzzles" class="puzzle-category" style="background-color: aliceblue;">
-    <div><img class="centered" src="images/puzzles/simpleloop002.png"><br><h2 style="text-align: center;">Logic Puzzles</h2></div>
     <div>
+        <img class="centered" src="images/puzzles/simpleloop002.png"><br><h2 style="text-align: center;">Logic Puzzles</h2><br>
+        <h4 style="text-align: center;"><a href="PDFs/Alex's Puzzle Collection.pdf">PDF version</a> &#x25CF; <a href="PDFs/Alex's Puzzle Solutions.pdf">Solutions</a></h4>
+    </div>
+
+    <div>
+        <button id = "select3" onclick = "onClick(this)">003: Masyu (Full) (Liar)</button><br>
         <button id = "select2" onclick = "onClick(this)">002: Simple Loop</button><br>
         <button id = "select1" onclick = "onClick(this)">001: Minesweeper</button>
     
@@ -63,6 +68,12 @@ Some cells are clued with a question mark (?). Like other clue cells, these cell
             document.getElementById("puzzleLink").setAttribute("href", "https://puzz.link/p?simpleloop/10/10/0020id0082c67o0g0048");
             document.getElementById("puzzleImage").src = "images/preview/simpleloop002preview.png";
             document.getElementById("puzzleDescription").innerHTML = "Draw a singular loop that passes through the centers of all unshaded cells on the grid. The loop may not have any intersections, branches, or dead ends."
+        }
+        else if (buttonId === "select3") {
+            document.getElementById("puzzleTitle").innerHTML = "003: Masyu (Full) (Liar)";
+            document.getElementById("puzzleLink").setAttribute("href", "https://puzz.link/p?mashu_edit/10/10/a090a009009030901399009990aa0003d0");
+            document.getElementById("puzzleImage").src = "images/preview/masyu_full_liar003.png";
+            document.getElementById("puzzleDescription").innerHTML = "Draw lines through the centers of <strong>all</strong> cells to make one single loop without crossings or branches. The loop should pass through all white circles. <br> Ordinarily, white “pearls” must be passed through in a straight line and the loop must turn in the previous and/or the next cell. However, in this grid, some white pearls are liars. You must treat these liar pearls as black pearls - i.e. you must turn on the pearl and travel straight through both the next and previous cell. <br> It is up to you to determine which pearls are genuine and which are fake.";
         }
     }
 </script>
