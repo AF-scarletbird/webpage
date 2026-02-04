@@ -29,6 +29,7 @@
     </div>
 
     <div>
+        <button id = "select4" onclick = "onClick(this)">004: KenKen (Build Your Own Cages</button><br>
         <button id = "select3" onclick = "onClick(this)">003: Masyu (Full) (Liar)</button><br>
         <button id = "select2" onclick = "onClick(this)">002: Simple Loop</button><br>
         <button id = "select1" onclick = "onClick(this)">001: Minesweeper</button>
@@ -74,6 +75,12 @@ Some cells are clued with a question mark (?). Like other clue cells, these cell
             document.getElementById("puzzleLink").setAttribute("href", "https://puzz.link/p?mashu_edit/10/10/a090a009009030901399009990aa0003d0");
             document.getElementById("puzzleImage").src = "images/preview/masyu_full_liar003.png";
             document.getElementById("puzzleDescription").innerHTML = "Draw lines through the centers of <strong>all</strong> cells to make one single loop without crossings or branches. The loop should pass through all white circles. <br> Ordinarily, white “pearls” must be passed through in a straight line and the loop must turn in the previous and/or the next cell. However, in this grid, some white pearls are liars. You must treat these liar pearls as black pearls - i.e. you must turn on the pearl and travel straight through both the next and previous cell. <br> It is up to you to determine which pearls are genuine and which are fake.";
+        }
+        else if (buttonId === "select4") {
+            document.getElementById("puzzleTitle").innerHTML = "004: KenKen (Build Your Own Cages)";
+            document.getElementById("puzzleLink").setAttribute("href", "https://f-puzzles.com/?load=N4IgzglgXgpiBcBWANCALhNAbO8QGkYA7QogAgAoAhAVwiwBMyBNAexoCcyB5Ad3IDCAQwDmMMAEoQqITTQALVhwQgAgjgAeZAGIwI0kBxo4wMNCu30sZCOQUwyiALQAjAJ5PEZERwhMAxqwAtgAOOGgwWG5kvJjyZPZkRDRBLjAcYGQAjAnyHOwi8V5gNP7xCkJoSaxJKWlcHDAhMJWZtmRCRNH5vGRKZIFYKUQAdAA6RKqZsQrVHEFC1qSkyGRgwQ5gAI40Qo2Z8kIAbg5pxGRYQmlYOEwz8UIJe2JVyanpHURMnX3NHJX9CgAalWTlWGlW/QA9BIRmQAKJCMp9ABmuXEmx2e3ENkyIT2VVYaNYRAcRLIKPYXAYEDAGCI/iq/lE4jhiOR5PspgGLLamUegSIGBENHYmQoJIcjREEBJqyIrCqYDCmDINBCEm8+XVqIGkSwYDhABV5A43vU2uQWsjmWIyEEaHSBsEXLYHGgapT5uinhwXrV3lxHbYRD7WH9KrLyAqIgxxkQABKsXgwE4ceWS3WJW049q8eQQZH2briPwOQ4nMhncjsbBuhgAbhsVVpapCCRqbnYHbIDDM6SCbpiBZt+v5jTI+I4hLR1viOcoyqR4gkExNrZCNCgUBwZEOmXWQQcNJRKPSxH8OPuPoV80WZGW50325w8AmWThABkrvqYExtrs+z2kI0QwBotJVJUnzRCErC2C2dimjydpONUVQAFaOghPoeu2OAokySiklwWAQAA1g47S3gsSzEKQ8YAExwgAcoqHQ3HqNzjg4U4zh0yEwBMTjCU4EwAJJCukKLLmhMDwGQJoOJc1zcQkMBlEQhaLFEk6cJE0SBGAR4YP4qzrGQxARL4RChp0BkurYkYkrq5rpJkFRKpGYAohAOKJGM4A0AwrBkTQAVkEYJgxFYCS+CIYhcIkJT+JeYAHv4jTEHCSYpmmqwemsrBYJW6zFe6BZ4luO4wKsXY0HuxzujUrAuKYHCVokkU4qRdJ/h0LisCc8YGD4fgIAA2uNwAAL7IDNc2zfNM0ALrIFNi0bQtC2retW1LRtO37XtB1rUdZ3Tctq0gDmE2gJeXETSAABKWQCFkIBXUciw0LgIBZAxiAaAYtakaSAgqAAxNo0MwwYlJCuDeAQwADKjaMgIt11jo9T0AMxvR9qBfUMv1ZFkQLA3IoMwIjIBQzD0NwySaC0yjaOoxjc1Yw98Djc9AAsAgMYTIDEz9Ki4xTqAg26rMM4zqDwyzkPsxzmP3QaOOIAIuMi2Lv2404lN1mDkPy9oTMIyrqsY8t01AA");
+            document.getElementById("puzzleImage").src = "images/preview/kenken_buildcages004.png";
+            document.getElementById("puzzleDescription").innerHTML = "Fill in the 5-by-5 grid completely with the numbers 1 through 5 such that no number repeats in any row or column. As wth normal KenKen, some squares have been labelled with a target number and an operator (+, -, x, or /). Each of these squares is part of one of four distinct cages. Each of these cages is a contiguous (one region, not split up) group of cells. The numbers in each cage must combine to form the target number using the operation noted.<br>However, none of the cages in which they reside have been outlined; it is up to you to determine which cells are part of each cage.<br>This puzzle has some differences with the normal KenKen puzzle:<ol><li>Labelled squares may exist at any point in the cage - not just in the top left corner like in normal KenKen.</li><li>Not all cells are part of a cage</li></ol>";
         }
     }
 </script>
