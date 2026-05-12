@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Accordion</title>
+</head>
+<body>
+
+<h1>Web Accordion [<a href="index.html">Back to Index</a>]</h1>
+<p id="status">Loading...</p>
+<pre id="output"></pre>
+
+<button onclick="send('undo')">Undo</button>
+<button onclick="send('restart')">Restart</button>
+<button onclick="send('new')">New game</button>
+<br><br>
+
+<input id="cmd" placeholder="e.g. leap AH or step 10C" size="40" />
+<button onclick="submitCmd()">Run</button>
+
+<script>
+  var Module = {
+    onRuntimeInitialized: function() {
+      document.getElementById('status').textContent = 'Ready';
+      send('new');
+    }
+  };
+
+  function send(input) {
+    const result = Module.ccall('processCommand', 'string', ['string'], [input]);
+    document.getElementById('output').textContent = result;
+  }
+
+  function submitCmd() {
+    const input = document.getElementById('cmd').value.trim();
+    if (!input) return;
+    document.getElementById('cmd').value = '';
+    send(input);
+  }
+
+  document.getElementById('cmd').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') submitCmd();
+  });
+</script>
+
+<script src="accordion.js"></script>
+<h3>Commands:</h3>
+<ul>
+  <li>new (n) starts a new game</li>
+  <li>undo (u) undoes one move</li>
+  <li>restart (r) undoes all moves played during current game</li>
+  <li>step XX (s XX) attempts to move the target card XX onto its left neighbor</li>
+  <li>leap XX (l XX) attempts to move the target card onto the card three positions to its left</li>
+  <li>XX card is the combination of rank (A,2,3,4,5,6,7,8,9,10,J,Q,K) and suit (H,C,D,S)</li>
+</ul>
+</body>
+</html>
