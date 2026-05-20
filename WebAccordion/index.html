@@ -44,7 +44,7 @@
 </script>
 
 <script src="accordion.js"></script>
-<h3>Commands:</h3>
+<h3>Commands</h3>
 <ul>
   <li>new (n) starts a new game</li>
   <li>undo (u) undoes one move</li>
@@ -53,5 +53,18 @@
   <li>leap XX (l XX) attempts to move the target card onto the card three positions to its left</li>
   <li>XX card is the combination of rank (A,2,3,4,5,6,7,8,9,10,J,Q,K) and suit (H,C,D,S)</li>
 </ul>
+<h3>Rules for Play</h3>
+<p>Begin with all 52 standard playing cards laid out in a line. Each turn, a card can be moved <strong>(step)</strong> onto the card directly to its left or <strong>(leap)</strong>onto the card three over to the left provided that the two cards share rank or suit.<br>
+As an example, take the excerpt: Q♦ A♥ 10♣ Q♣ K♥ J♦</p>
+<ul>
+  <li>The Queen of Clubs (Q♣, QC) can <strong>step</strong> to take 10♣ because they share the suit Clubs or <strong>leap</strong> to take Q♦ due to their shared rank.</li>
+  <li>The King of Hearts (K♥, KH) can <strong>leap</strong> onto A♥ due to a shared suit.</li>
+</ul>
+<p>Each move will shrink the line by one card. The objective of Accordion is to shrink (like an accordion!) the line all the way down to one card. You are free to make any sequence of moves to acccomplish this goal.</p>
+<h3>Development Commentary</h3>
+<p>Getting a playable game online was something I had wanted to do for a long time, so I am very happy to see this working. Structurally, this game is similar to the Golf and Black Hole programs I developed last year.<br>
+I used <a href="https://emscripten.org/index.html">Emscripten</a> on a modified version of the Accordion console program to generate the JavaScript and WebAssembly pages essential to this page's function.</p>
+<h3>External Resources</h3>
+<p>Accordion has a <a href="https://en.wikipedia.org/wiki/Accordion_(card_game)">Wikipedia page</a>. In addition, I found <a href="https://www.solitairelaboratory.com/accordion.html">this article</a> very enlightening in terms of personal play.</p>
 </body>
 </html>
