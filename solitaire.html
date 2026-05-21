@@ -38,10 +38,11 @@
 <body style="background-color: skyblue;">
 
 <h1>Alex's Page [<a href="index.html">Home</a>] [&#x25CF; Solitaire &#x25CF;] [<a href="puzzles.html">Puzzles</a>] [<a href="technical.html">Hardware Projects</a>] [Miscellaneous]</h1>
-<h2>Solitaire Implementations</h2>
+<h2>Console Solitaire Implementations</h2>
 <div style="background-color: lightgreen;">
     <h2>Contents</h2>
     <ol>
+        <li><a href="solitaire.html#accordion">Accordion</a></li>
         <li><a href="solitaire.html#black-hole">Black Hole</a></li>
         <li><a href="solitaire.html#golf">Golf</a></li>
     </ol>
@@ -49,6 +50,51 @@
 
 
 <div style="background-color: antiquewhite;">
+<!-- Accordion Solitaire -->
+<div class="solitaire-entry">
+
+<div class="centered">
+    <a href="https://github.com/AF-scarletbird/accordion/tree/master">
+        <h2 id="accordion">Accordion</h2>
+        <img class="outset-bordered" src="images/solitaire/accordion.jpg">
+    </a>
+    
+    <p>Last Updated: May 21st, 2026</p>
+</div>
+
+<div>
+
+    <!-- <img class="screenshot" src="images/solitaire/blackHoleScreenshot.png"> -->
+
+</div>
+
+<div>
+    <p>In the next game covered, Accordion, the objective is to compress a deck of cards all into one pile - no points for guessing the motivation behind the name!</p>
+
+    <button onclick="showAccordion()">Commentary</button>
+        <div id="accordionComments" style="background-color: whitesmoke;">
+            <p>Unlike the previous two games, this implementation uses classes and structs to represent each Game, Card, and Move. Planning to include these data types from the outset allowed for a more 
+                robust and easier development, although adjustments were still needed mid-project. In addition, this design allows for extra features (such as variants and a solver) to be implmented easier, I suspect, than if I had implemented Accordion the first way (the way I did for Golf and Black Hole)<br>
+                The prospect of implementing this game was made all the more concrete by the <a href="https://courses.grainger.illinois.edu/ece220/sp2026/">programming</a> course I took at UIUC. For example,
+                working with linked lists and removing entries gave me the idea of representing a deal as a linked list, and cutting out cards one at a time. This would become a C++ vector which would have Cards 
+                removed, but the original idea was spun off of my C programming.
+            </p>
+        </div>
+</div>
+
+</div>
+
+
+<script>
+    function showAccordion() {
+        var element = document.getElementById("accordionComments");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
 <!-- Black Hole Solitaire -->
 <div class="solitaire-entry">
 
