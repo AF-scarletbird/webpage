@@ -30,6 +30,7 @@
     </div>
 
     <div>
+        <button id = "select6" onclick = "onClick(this)">006: Ayeheya</button><br>
         <button id = "select5" onclick = "onClick(this)">005: Star Battle</button><br>
         <button id = "select4" onclick = "onClick(this)">004: KenKen (Build Your Own Cages</button><br>
         <button id = "select3" onclick = "onClick(this)">003: Masyu (Full) (Liar)</button><br>
@@ -89,6 +90,12 @@ Some cells are clued with a question mark (?). Like other clue cells, these cell
             document.getElementById("puzzleLink").setAttribute("href", "https://puzz.link/p?starbattle/10/10/2/g1o3hfhv7uvju1s0g17v3u1s1o0a30fgfsfu");
             document.getElementById("puzzleImage").src = "images/preview/starbattle005.png";
             document.getElementById("puzzleDescription").innerHTML = "Place two stars in every column, row, and bold-outlined region such that no two stars neighbor each other orthogonally or diagonally.";
+        }
+        else if (buttonId === "select6") {
+            document.getElementById("puzzleTitle").innerHTML = "006: Ayeheya";
+            document.getElementById("puzzleLink").setAttribute("href", "https://puzz.link/p?ayeheya/10/10/4gg90hn3e6sdp0i120vv00uc002004uf00vvv");
+            document.getElementById("puzzleImage").src = "images/preview/ayeheya006.png";
+            document.getElementById("puzzleDescription").innerHTML = "Standard Heyawake rules apply: (1) Shade some cells on the board such that no shaded cells are orthogonally (horizontally or vertically) adjacent. (2) There must not exist any line of unshaded cells, vertical or horizontal, that goes through 2 or more region borders (3) All unshaded cells must be part of one contiguous region (4) A number indicates the amount of shaded cells in a region (no numbers to worry about in this case) In this variant, shaded cells in each bolded region must exhibit 180° rotational symmetry around the center of each region.";
         }
     }
 </script>
