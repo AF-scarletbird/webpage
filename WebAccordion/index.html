@@ -18,6 +18,15 @@
 <input id="cmd" placeholder="e.g. leap AH or step 10C" size="40" />
 <button onclick="submitCmd()">Run</button>
 
+<hr>
+<h3>Moves taken</h3>
+<pre id="moves"></pre>
+
+<hr>
+<h3>Solver</h3>
+<button onclick="showSolution()">Check if solvable</button>
+<pre id="solution"></pre>
+
 <script>
   var Module = {
     onRuntimeInitialized: function() {
@@ -29,6 +38,7 @@
   function send(input) {
     const result = Module.ccall('processCommand', 'string', ['string'], [input]);
     document.getElementById('output').textContent = result;
+    document.getElementById('moves').textContent = Module.ccall('getMoves', 'string', [], []);
   }
 
   function submitCmd() {
@@ -41,6 +51,11 @@
   document.getElementById('cmd').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') submitCmd();
   });
+  function showSolution() {
+    document.getElementById('solution').textContent = 'Solving...';
+    const result = Module.ccall('getSolution', 'string', [], []);
+    document.getElementById('solution').textContent = result;
+}
 </script>
 
 <script src="accordion.js"></script>
