@@ -12,6 +12,43 @@
 <p><i>Page under construction</i></p>
 <h3>Setting Up In-Ceiling Speakers</h3>
 <p><i>Page under construction. In the mean time, here's a dump of some images:</i></p>
+<p>For ages, there were two in-ceiling speakers that we never utilized. The goal of this project was to connect our television to these speakers to create a surround-sound system. <br>
+There are three main components to a surround-sound system: the television being the source of audio, the two ceiling speakers, and a connection that runs from the audio TV output to the binding posts corresponding to the speakers. 
+Two of the components were preexisting: the TV and the speakers, meaning that I have to provide the connection.</p>
+<div>
+    <figure>
+
+    </figure>
+    <figure>
+        <img src="images/technical/in-ceiling_speaker.jpg" style="width:20%">
+        <figcaption>Ceiling Speaker</figcaption> 
+    </figure>
+</div>
+<p>As for the connection, an amplifier is necessary to convert the TV's audio signal to something viable for the speaker, lest the output be extremely faint or nonexistant. The amp I opted for is the <a href="https://www.amazon.com/gp/product/B076XSBCCL">Fost Audio BT10A Bluetooth 5.0 Stereo</a>. Having a 3.5 MM AUX input and outputs for two speakers, it was a cheap and reliable option for my purposes. <br>
+ A <a href="https://www.amazon.com/gp/product/B01I0SI1SG/ref=ewc_pr_img_1?smid=A3RGY69E1YCMN4">3.5 mm Nylon Aux Cable</a> can make the TV output -> amp input connection, and <a href="https://www.amazon.com/dp/B006LW0W5Y?ref_=apb_fb_ac_d_apb_fb_asin_electronics_2">speaker wire</a> can make the amp output to binding post connection. </p>
+<div style="display: flex">
+    <figure>
+        <img src="images/technical/tv_audio_out.jpg" style="width:70%">
+        <figcaption>TV Audio Out (Digital Out goes to unrelated soundbar)</figcaption>
+    </figure>
+    <figure>
+        <img src="images/technical/aux_in_stereo.jpg" style="width:100%">
+        <figcaption>Back of BT10A Amp - note the 3.5 mm AUX IN (red), two speaker outputs (yellow), and power (green)</figcaption>
+    </figure>
+    <figure>
+        <img src="images/technical/binding-post.jpg" style="width:45%">
+        <figcaption>Binding Post containing the speaker inputs. </figcaption>
+    </figure>
+</div>
+<p>The outlet contains five total binding post pairs to allow for any potential expansion of the audio system. However, since only two of the five were connected, I used a multimeter to measure the resistance between each pair's poles; a reading of ~8 ohms indicates that that pair goes to one of the speakers; a max reading indicates that the pair is an open circuit.</p>
+<p>All of this makes for a circuit like this:</p>
+<figure>
+    <img src="images/technical/surround_sound_circuit.jpg" style="width:30%">
+    <figcaption>The Circuit Diagram</figcaption>
+</figure>
+<p>Implementation of the surround-sound system was successful and functionality is good. The amp even supports Bluetooth to boot!</p>
+
+
 <img src="./images/technical/aux_in_stereo.jpg" style="width:128px;height:128px;"><img src="/images/technical/circuit.png" style="width:128px;height:128px;">
 <img src="images/technical/in-ceiling_speaker.jpg" style="width:128px;height:128px;">
 <img src="images/technical/speaker_wiring.jpg" style="width:128px;height:128px;">
